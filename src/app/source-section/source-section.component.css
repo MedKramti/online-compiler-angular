@@ -1,0 +1,10 @@
+.run-btn{
+    position:absolute;
+    right:10px;
+}
+
+#editor { 
+    height:80vh;
+    width:100%;
+    font-size: 20px;
+}

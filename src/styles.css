@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+.section-title{
+    padding:8px 30px;
+    border-right:1px solid #dee2e6;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.run-btn{
+    padding:4px 18px;
+}
+
+body {
+    color:rgb(60, 60, 60);
+}
+
+.col-6{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.row {
+    margin-right: 0;
+}
