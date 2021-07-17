@@ -7,10 +7,10 @@ import { Response } from './class/response';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  output : string = "";
+  output !: Response;
   handleOutput(response : Response){
-    console.log(response.output);
-    this.output = response.output;
+   // console.log(response.output);
+    this.output = response;
   }
 
 

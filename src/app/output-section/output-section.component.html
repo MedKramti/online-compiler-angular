@@ -3,6 +3,15 @@
         <span class="section-title">Output</span>
     </div>
     <div class="code">
-        {{ output }}
+        {{ output.output }}
     </div>
-</div>
+    <div class="status mt-5">
+        
+        <ul>
+            <li>CPU time: {{ output.cpuTime }}</li>
+            <li>Status code: {{ output.statusCode }}</li>
+            <li>Memory: {{ output.memory }}</li>
+        </ul>
+        <span class="text-danger">{{output.error}}</span>
+    </div>
+</div>    
