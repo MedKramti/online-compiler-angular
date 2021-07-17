@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'output-section',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./output-section.component.css']
 })
 export class OutputSectionComponent implements OnInit {
-
+  @Input() output:string = "";
   constructor() { }
 
   ngOnInit(): void {

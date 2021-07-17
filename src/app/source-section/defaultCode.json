@@ -1,0 +1,7 @@
+{
+    "java" : "public class HelloWorld{\n    public static void main(String []args){\n       System.out.println(\"Hello World!\");\n}\n}",
+    "ruby" : "# Hello World Program in Ruby\nputs \"Hello World!\";",
+    "c" : "#include <stdio.h>\nint main() {\n   printf(\"Hello, World!\");\n   return 0;\n}",
+    "python" : "# Hello World Program in Python\nprint(\"Hello world!\")"
+
+}
