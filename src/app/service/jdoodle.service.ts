@@ -13,8 +13,8 @@ export class JdoodleService {
   private secretId:string;
   private requestURL = "https://proxy-forw.herokuapp.com/https://api.jdoodle.com/v1/execute";
   constructor(private http: HttpClient) { 
-    this.clientId = "";
-    this.secretId = "";
+    this.clientId = key.clientId;
+    this.secretId = key.secretId;
   }
 
   public sendRequest(code:string, language:string){

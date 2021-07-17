@@ -12,8 +12,9 @@ declare var ace:any;
 export class SourceSectionComponent implements OnInit {
 
   @Output() output : EventEmitter<Response> = new EventEmitter<Response>();
-
+  selectedLanguage = "java";
   editor : any;
+  wait = false;
   constructor(private jdoodleService:JdoodleService) { }
 
   ngOnInit(): void {
@@ -24,25 +25,24 @@ export class SourceSectionComponent implements OnInit {
   }
 
   run(){
+    this.wait = true;
     let code = this.editor.getValue();
-    let language = "java";
-    this.jdoodleService.sendRequest(code,language).subscribe(
-      data => { this.output.emit(data); }
+    this.jdoodleService.sendRequest(code,this.selectedLanguage).subscribe(
+      data => { this.output.emit(data); this.wait=false}
     );
   }
 
   changeLanguage(event : Event){
-    
-    switch((<HTMLInputElement>event.target).value){
+    let language = (<HTMLInputElement>event.target).value;
+    this.selectedLanguage = language;
+    switch(language){
       case "java"  : this.editor.setValue(defaultCodeJSON.java); break;
-      case "c"  :  this.editor.setValue(defaultCodeJSON.c); break;
-      case "python3"  : this.editor.setValue(defaultCodeJSON.python); break;
+      case "c"     : this.editor.setValue(defaultCodeJSON.c);
+                     language="c_cpp"; break;
+      case "python": this.editor.setValue(defaultCodeJSON.python); break;
       case "ruby"  : this.editor.setValue(defaultCodeJSON.ruby); break;
     }
-
+    this.editor.session.setMode(`ace/mode/${language}`);
   }
-
-
-
 
 }

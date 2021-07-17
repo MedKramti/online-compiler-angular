@@ -2,11 +2,10 @@
     <div class="d-flex border-bottom">
         <span class="section-title">Main</span>
         <div class="languages d-flex">
-
            <select class="form-control mr-3" (change) = "changeLanguage($event)">
                <option value="java">Java</option>
                <option value="c">C</option>
-               <option value="python3">Python 3</option>
+               <option value="python">Python 3</option>
                <option value="ruby">Ruby</option>
            </select>
            <button class="btn btn-sm btn-primary run-btn" (click)="run()">Run</button>
@@ -14,5 +13,9 @@
         </div>
     </div>
     
-    <div id="editor"></div>
+    <div id="editor" ></div>
+</div>
+
+<div class="wait" *ngIf="wait">
+    <img src="../../assets/icons/wait.gif">
 </div>

@@ -1,7 +1,3 @@
-.run-btn{
-
-}
-
 #editor { 
     height:80vh;
     width:100%;
@@ -12,4 +8,14 @@
     margin-left: 10px;
     position:absolute;
     right:10px;
+}
+
+.wait{
+   
+    position:absolute;
+    top:50%;
+    left:30%
+}
+.wait img {
+    width: 250px;
 }
