@@ -6,7 +6,7 @@ Compile your Java, C, Ruby, Python code in your browser.
 https://user-images.githubusercontent.com/55637712/126044539-d0d40da4-df6e-4f78-901e-a6fe9d67ce2d.mp4
 
 ## Configuration
-Change the key in *src/app/service/jdoodle-example-key.json with your jdoodle key and rename the file to jdoodle-example-key.json
+Change the key in *src/app/service/jdoodle-key-example.json* with your jdoodle key and rename the file to jdoodle-key.json
 ## Run the application
 1. Install dependencies
 
